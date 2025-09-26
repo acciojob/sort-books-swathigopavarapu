@@ -24,29 +24,34 @@ const BooksList = () => {
 
       {/* Sorting options with labels for Cypress */}
       <div className="sort-options">
-        <label htmlFor="sort-criteria">Sort by:</label>
-        <select
-          id="sort-criteria"
-          value={criteria}
-          onChange={e => setCriteria(e.target.value)}
-        >
-          <option value="title">Title</option>
-          <option value="author">Author</option>
-          <option value="publisher">Publisher</option>
-        </select>
+  <div>
+    <label htmlFor="sort-criteria">Sort by:</label>
+    <select
+      id="sort-criteria"
+      value={criteria}
+      onChange={e => setCriteria(e.target.value)}
+    >
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="publisher">Publisher</option>
+    </select>
+  </div>
 
-        <label htmlFor="sort-order">Order:</label>
-        <select
-          id="sort-order"
-          value={order}
-          onChange={e => setOrder(e.target.value)}
-        >
-          <option value="asc">Ascending</option>
-          <option value="desc">Descending</option>
-        </select>
+  <div>
+    <label htmlFor="sort-order">Order:</label>
+    <select
+      id="sort-order"
+      value={order}
+      onChange={e => setOrder(e.target.value)}
+    >
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+  </div>
 
-        <button onClick={handleSortChange}>Sort</button>
-      </div>
+  <button onClick={handleSortChange}>Sort</button>
+</div>
+
 
       {/* Loading and error messages */}
       {loading && <p>Loading...</p>}
