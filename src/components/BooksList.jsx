@@ -68,23 +68,22 @@ const BooksList = () => {
           </tr>
         </thead>
         <tbody>
-          {books && books.length > 0 ? (
-            books.map((book, index) => (
-              <tr key={index}>
-                <td>{book.title}</td>
-                <td>{book.author}</td>
-                <td>{book.publisher}</td>
-                <td>{book.primary_isbn13}</td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="4" style={{ textAlign: 'center' }}>
-                No books available
-              </td>
-            </tr>
-          )}
-        </tbody>
+  {books.length > 0 ? (
+    books.map((book, index) => (
+      <tr key={index}>
+        <td>{book.title}</td>
+        <td>{book.author}</td>
+        <td>{book.publisher}</td>
+        <td>{book.primary_isbn13}</td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="4" style={{ textAlign: 'center' }}>No books available</td>
+    </tr>
+  )}
+</tbody>
+
       </table>
     </div>
   );
